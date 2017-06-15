@@ -1,0 +1,73 @@
+{
+  "index.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/jquery-1.11.0.min.js",
+      "takephoto.html",
+      "share.html",
+      "third.html",
+      "push.html",
+      "pay.html",
+      "upload.html"
+    ],
+    "refer": [
+      "takephoto.html",
+      "share.html",
+      "pay.html",
+      "upload.html",
+      "push.html",
+      "third.html"
+    ]
+  },
+  "share.html": {
+    "resources": [
+      "img/magazine-unlock-01-2.3.483-bigpicture_01_63.jpg",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/jquery-1.11.0.min.js"
+    ],
+    "refer": []
+  },
+  "takephoto.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/jquery-1.11.0.min.js"
+    ]
+  },
+  "upload.html": {
+    "resources": [
+      "/storage/emulated/0/Tencent/QQfile_recv/X%(4G@(]UHO~J%7D(%7DH(%(0LX.png",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/jquery-1.11.0.min.js",
+      "fonts/mui.ttf"
+    ]
+  },
+  "pay.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/jquery-1.11.0.min.js"
+    ]
+  },
+  "push.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/jquery-1.11.0.min.js"
+    ]
+  },
+  "third.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/jquery-1.11.0.min.js"
+    ]
+  }
+}
