@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>animate</title>
+	<link rel="stylesheet" type="text/css" href="animate.css">
+</head>
+<body>
+	<div id="animate">animate</div>
+	<script src="zepto.js"></script>
+	<script>
+		$("#animate").on("click", function(){
+			$(this).animateCss("animated bounceOutLeft");
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<p>IScroll.js 最新版本 v5.1.2</p>
+<p>修复了输入框无法输入和横向滚动时无法上下滚动页面的问题</p>
+<pre>var myScroll = new IScroll('#wrapper', {      disableMouse: true,      disablePointer: true  });  </pre>
+<p>官网：http://iscrolljs.com</p>
+<p>github： https://github.com/cubiq/iscroll/</p>
+<p> </p>
+<p>&nbsp;</p>
+<p> </p>
+<p>调用时参数设置：</p>
+<table border="1" cellpadding="2" cellspacing="0">
+  <tbody>
+    <tr>
+      <td valign="center">所属</td>
+      <td valign="center">属性名</td>
+      <td valign="center">说明</td>
+      <td valign="center">默认值</td>
+    </tr>
+    <tr>
+      <td rowspan="4" valign="top">核心库croe</td>
+      <td valign="top">options.useTransform</td>
+      <td valign="top">是否使用CSS3的Transform属性</td>
+      <td valign="top">true</td>
+    </tr>
+    <tr>
+      <td valign="top">options.useTransition</td>
+      <td valign="top">是否使用CSS3的Transition属性，否则使用requestAnimationFram代替</td>
+      <td valign="top">true</td>
+    </tr>
+    <tr>
+      <td valign="top">options.HWCompositing</td>
+      <td valign="top">是否启用硬件加速</td>
+      <td valign="top">true</td>
+    </tr>
+    <tr>
+      <td valign="top">options.bounce</td>
+      <td valign="top">是否启用弹力动画效果，关掉可以加速</td>
+      <td valign="top">true</td>
+    </tr>
+    <tr>
+      <td rowspan="14" valign="top">基础特性Basic features</td>
+      <td valign="top">options.click</td>
+      <td valign="top">是否启用click事件。建议关闭此选项并启用自定义的tap事件（options.tap）</td>
+      <td valign="top">false</td>
+    </tr>
+    <tr>
+      <td valign="top">options.disableMouse</td>
+      <td valign="top">是否关闭鼠标事件探测。如知道运行在哪个平台，可以开启它来加速。</td>
+      <td valign="top">false</td>
+    </tr>
+    <tr>
+      <td valign="top">options.disablePointer</td>
+      <td valign="top">是否关闭指针事件探测。如知道运行在哪个平台，可以开启它来加速。</td>
+      <td valign="top">false</td>
+    </tr>
+    <tr>
+      <td valign="top">options.disableTouch</td>
+      <td valign="top">是否关闭触摸事件探测。如知道运行在哪个平台，可以开启它来加速。</td>
+      <td valign="top">false</td>
+    </tr>
+    <tr>
+      <td valign="top">options.eventPassthrough</td>
+      <td valign="top">使用IScroll的横轴滚动时，如想使用系统立轴滚动并在横轴上生效，请开启。<a target="_blank" href="http://lab.cubiq.org/iscroll5/demos/event-passthrough/" title="">event passthrough demo</a></td>
+      <td valign="top">false</td>
+    </tr>
+    <tr>
+      <td valign="top">options.freeScroll</td>
+      <td valign="top">主要在上下左右滚动都生效时使用，可以向任意方向滚动。<a target="_blank" href="http://lab.cubiq.org/iscroll5/demos/2d-scroll/" title="">2D scroll demo</a></td>
+      <td valign="top">false</td>
+    </tr>
+    <tr>
+      <td valign="top">options.keyBindings</td>
+      <td valign="top">绑定按键事件。<a target="_blank" href="http://iscrolljs.com/#key-bindings" title="">Key bindings</a></td>
+      <td valign="top">false</td>
+    </tr>
+    <tr>
+      <td valign="top">options.invertWheelDirection</td>
+      <td valign="top">反向鼠标滚轮。</td>
+      <td valign="top">false</td>
+    </tr>
+    <tr>
+      <td valign="top">options.momentum</td>
+      <td valign="top">是否开启动量动画，关闭可以提升效率。</td>
+      <td valign="top">true</td>
+    </tr>
+    <tr>
+      <td valign="top">options.mouseWheel</td>
+      <td valign="top">是否监听鼠标滚轮事件。</td>
+      <td valign="top">false</td>
+    </tr>
+    <tr>
+      <td valign="top">options.preventDefault</td>
+      <td valign="top">是否屏蔽默认事件。</td>
+      <td valign="top">true</td>
+    </tr>
+    <tr>
+      <td valign="top">options.scrollbars</td>
+      <td valign="top">是否显示默认滚动条</td>
+      <td valign="top">false</td>
+    </tr>
+    <tr>
+      <td valign="top">options.scrollXoptions.scrollY</td>
+      <td valign="top">可以设置IScroll滚动的初始位置</td>
+      <td valign="top">0</td>
+    </tr>
+    <tr>
+      <td valign="top">options.tap</td>
+      <td valign="top">是否启用自定义的tap事件可以自定义tap事件名</td>
+      <td valign="top">false</td>
+    </tr>
+    <tr>
+      <td rowspan="5" valign="top">滚动条Scrollbars</td>
+      <td valign="top">options.scrollbars</td>
+      <td valign="top">是否显示默认滚动条</td>
+      <td valign="top">false</td>
+    </tr>
+    <tr>
+      <td valign="top">options.fadeScrollbars</td>
+      <td valign="top">是否渐隐滚动条，关掉可以加速</td>
+      <td valign="top">true</td>
+    </tr>
+    <tr>
+      <td valign="top">options.interactiveScrollbars</td>
+      <td valign="top">用户是否可以拖动滚动条</td>
+      <td valign="top">false</td>
+    </tr>
+    <tr>
+      <td valign="top">options.resizeScrollbars</td>
+      <td valign="top">是否固定滚动条大小，建议自定义滚动条时可开启。</td>
+      <td valign="top">false</td>
+    </tr>
+    <tr>
+      <td valign="top">options.shrinkScrollbars</td>
+      <td valign="top">滚动超出滚动边界时，是否收缩滚动条。&lsquo;clip&rsquo;：裁剪超出的滚动条
+        <p>&lsquo;scale&rsquo;:按比例的收缩滚动条（占用CPU资源）</p>
+        <p>false:不收缩，</p></td>
+      <td valign="top">false</td>
+    </tr>
+    <tr>
+      <td rowspan="7" valign="top"> </td>
+      <td valign="top">options.indicators</td>
+      <td valign="top">指示IScroll该如何滚动，Scrollbars的底层实现方式。</td>
+      <td valign="top"> </td>
+    </tr>
+    <tr>
+      <td valign="top">options.indicators.el</td>
+      <td valign="top">制定滚动条的容器。容器中的第一个元素即为指示器。例如：
+        <p>indicators: {</p>
+        <p>el: document.getElementById(&lsquo;indicator&rsquo;)</p>
+        <p>}</p>
+        <p>indicators: {</p>
+        <p>el: &lsquo;#indicator&rsquo;</p>
+        <p>}</p></td>
+      <td valign="top"> </td>
+    </tr>
+    <tr>
+      <td valign="top">options.indicators.ignoreBoundaries</td>
+      <td valign="top">是否忽略容器边界。设为true 可以设置滚动速度<a target="_blank" href="http://lab.cubiq.org/iscroll5/demos/parallax/" title="">parallax demo</a></td>
+      <td valign="top">false</td>
+    </tr>
+    <tr>
+      <td valign="top">options.indicators.listenXoptions.indicators.listenY</td>
+      <td valign="top">指示器监听那个方向的滚动，可以设置为一个方向或2个方向</td>
+      <td valign="top">true</td>
+    </tr>
+    <tr>
+      <td valign="top">options.indicators.speedRatioXoptions.indicators.speedRatioY</td>
+      <td valign="top">指示器相对主滚动条的速度</td>
+      <td valign="top">0</td>
+    </tr>
+    <tr>
+      <td valign="top">options.indicators.fadeoptions.indicators.interactive
+        <p>options.indicators.resize</p>
+        <p>options.indicators.shrink</p></td>
+      <td valign="top">如scrollbars的设置<a target="_blank" href="http://lab.cubiq.org/iscroll5/demos/minimap/" title="">minimap demo</a></td>
+      <td valign="top"> </td>
+    </tr>
+    <tr>
+      <td valign="top">options.probeType</td>
+      <td valign="top">需要使用iscroll-probe.js才能生效probeType：1  滚动不繁忙的时候触发
+        <p>probeType：2  滚动时每隔一定时间触发</p>
+        <p>probeType：3  每滚动一像素触发一次</p></td>
+      <td valign="top"> </td>
+    </tr>
+    <tr>
+      <td valign="top">分割页面snap</td>
+      <td valign="top">options.snap</td>
+      <td valign="top">自动分割容器，用于制作走马灯效果等。Options.snap:true//根据容器尺寸自动分割
+        <p>Options.snap:el//根据元素分割</p></td>
+      <td valign="top">false</td>
+    </tr>
+    <tr>
+      <td rowspan="5" valign="top">缩放zoom</td>
+      <td valign="top">options.zoom</td>
+      <td valign="top">是否打开缩放最好使用iscroll-zoom.js
+        <p>如放大模糊，可将源容器定义为2倍大小，然后scale(0.5)</p>
+        <p><a target="_blank" href="http://lab.cubiq.org/iscroll5/demos/zoom/" title="">zoom demo</a></p></td>
+      <td valign="top">false</td>
+    </tr>
+    <tr>
+      <td valign="top">options.zoomMax</td>
+      <td valign="top">最大缩放等级</td>
+      <td valign="top">4</td>
+    </tr>
+    <tr>
+      <td valign="top">options.zoomMin</td>
+      <td valign="top">最小缩放等级</td>
+      <td valign="top">1</td>
+    </tr>
+    <tr>
+      <td valign="top">options.zoomStart</td>
+      <td valign="top">初始缩放等级</td>
+      <td valign="top">1</td>
+    </tr>
+    <tr>
+      <td valign="top">options.wheelAction</td>
+      <td valign="top">滚轮动作设为&rsquo;zoom&rsquo;，可以用滚轮缩放</td>
+      <td valign="top">undefined</td>
+    </tr>
+    <tr>
+      <td rowspan="7" valign="top">更多设置</td>
+      <td valign="top">options.bindToWrapper</td>
+      <td valign="top">光标、触摸超出容器时，是否停止滚动</td>
+      <td valign="top">false</td>
+    </tr>
+    <tr>
+      <td valign="top">options.bounceEasing</td>
+      <td valign="top">弹力动画效果预置效果：&lsquo;quadratic&rsquo;, &lsquo;circular&rsquo;, &lsquo;back&rsquo;, &lsquo;bounce&rsquo;, &lsquo;elastic&rsquo;（最后两个不能通过css3表现）
+        <p>还可以自定义效果</p>
+        <p>bounceEasing: {</p>
+        <p>style: &lsquo;cubic-bezier(0,0,1,1)&rsquo;,//css3时</p>
+        <p>fn: function (k) { return k; }//不使用css3，使用requestAnimationFrame时</p>
+        <p>}</p></td>
+      <td valign="top">&lsquo;circular&rsquo;</td>
+    </tr>
+    <tr>
+      <td valign="top">options.bounceTime</td>
+      <td valign="top">弹力动画持续的毫秒数</td>
+      <td valign="top">600</td>
+    </tr>
+    <tr>
+      <td valign="top">options.deceleration</td>
+      <td valign="top">滚动动量减速越大越快，建议不大于0.01</td>
+      <td valign="top">0.0006</td>
+    </tr>
+    <tr>
+      <td valign="top">options.mouseWheelSpeed</td>
+      <td valign="top">鼠标滚轮速度</td>
+      <td valign="top"> </td>
+    </tr>
+    <tr>
+      <td valign="top">options.preventDefaultException</td>
+      <td valign="top">列出哪些元素不屏蔽默认事件；</td>
+      <td valign="top">{tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT)$/ }</td>
+    </tr>
+    <tr>
+      <td valign="top">options.resizePolling</td>
+      <td valign="top">重新调整窗口大小时，重新计算IScroll的时间间隔</td>
+      <td valign="top">60</td>
+    </tr>
+    <tr>
+      <td valign="top">键位绑定</td>
+      <td valign="top">options.keyBindings</td>
+      <td valign="top">监听按键事件控制IScroll例如：
+        <p>keyBindings: {</p>
+        <p>pageUp: 33,</p>
+        <p>pageDown: 34,</p>
+        <p>end: 35,</p>
+        <p>home: 36,</p>
+        <p>left: 37,</p>
+        <p>up: 38,</p>
+        <p>right: 39,</p>
+        <p>down: 40</p>
+        <p>}</p></td>
+      <td valign="top"> </td>
+    </tr>
+  </tbody>
+</table>
+<h2><a name="t0" id="t0"></a>API:</h2>
+<table>
+  <tbody>
+    <tr>
+      <td valign="center">所属</td>
+      <td valign="center">方法名</td>
+      <td valign="center">说明</td>
+    </tr>
+    <tr>
+      <td valign="top">滚动</td>
+      <td valign="top">scrollTo(x, y, time, easing)</td>
+      <td valign="top">滚动到：x，y，事件，easing方式x:int
+        <p>y:int</p>
+        <p>time:int</p>
+        <p>Easing: quadratic | circular | back | bounce | elastic</p>
+        <p>见IScroll.utils.ease 对象</p>
+        <p>例：</p>
+        <p>myScroll.scrollTo(0, -100, 1000, IScroll.utils.ease.elastic);</p></td>
+    </tr>
+    <tr>
+      <td valign="top"> </td>
+      <td valign="top">scrollBy(x, y, time, easing)</td>
+      <td valign="top">滚动到相对于当前位置的某处其余同上</td>
+    </tr>
+    <tr>
+      <td valign="top"> </td>
+      <td valign="top">scrollToElement(el, time, offsetX, offsetY, easing)</td>
+      <td valign="top">滚动到某个元素。el为必须的参数offsetX/offsetY：相对于el元素的位移。设为true即为屏幕中心
+        <p><a target="_blank" href="http://lab.cubiq.org/iscroll5/demos/scroll-to-element/" title="">scroll to element</a></p></td>
+    </tr>
+    <tr>
+      <td rowspan="2" valign="top">分割页面snap</td>
+      <td valign="top">goToPage(x, y, time, easing)</td>
+      <td valign="top">根据options.snap分割页面，跳转到横向、纵向某页。XY可以同时生效。结合options.snap使用</td>
+    </tr>
+    <tr>
+      <td valign="top">next()prev()</td>
+      <td valign="top">上一页，下一页结合options.snap使用</td>
+    </tr>
+    <tr>
+      <td valign="top">缩放</td>
+      <td valign="top">zoom(scale, x, y, time)</td>
+      <td valign="top">缩放容器Scale:缩放因子</td>
+    </tr>
+    <tr>
+      <td valign="top">刷新</td>
+      <td valign="top">refresh()</td>
+      <td valign="top">刷新IScroll</td>
+    </tr>
+    <tr>
+      <td valign="top">销毁</td>
+      <td valign="top">destroy()</td>
+      <td valign="top">销毁IScroll，节省资源</td>
+    </tr>
+    <tr>
+      <td valign="top"> </td>
+      <td valign="top"> </td>
+      <td valign="top"> </td>
+    </tr>
+  </tbody>
+</table>
+<h2><a name="t1" id="t1"></a>事件使用：</h2>
+<table>
+  <tbody>
+    <tr>
+      <td valign="top">beforeScrollStart</td>
+      <td valign="top">用户点击屏幕，但是还未初始化滚动前</td>
+    </tr>
+    <tr>
+      <td valign="top">scrollCancel</td>
+      <td valign="top">初始化滚动后又取消</td>
+    </tr>
+    <tr>
+      <td valign="top">scrollStart</td>
+      <td valign="top">开始滚动</td>
+    </tr>
+    <tr>
+      <td valign="top">scroll</td>
+      <td valign="top">滚动中</td>
+    </tr>
+    <tr>
+      <td valign="top">scrollEnd</td>
+      <td valign="top">滚动结束</td>
+    </tr>
+    <tr>
+      <td valign="top">flick</td>
+      <td valign="top">轻击屏幕左、右</td>
+    </tr>
+    <tr>
+      <td valign="top">zoomStart</td>
+      <td valign="top">开始缩放</td>
+    </tr>
+    <tr>
+      <td valign="top">zoomEnd</td>
+      <td valign="top">缩放结束</td>
+    </tr>
+  </tbody>
+</table>
+<h2><a name="t2" id="t2"></a>IScroll的属性：</h2>
+<table>
+  <tbody>
+    <tr>
+      <td valign="top">myScroll.x/y</td>
+      <td valign="top">当前位置</td>
+    </tr>
+    <tr>
+      <td valign="top">myScroll.directionX/Y</td>
+      <td valign="top">上一次的滚动方向(-1 下/右, 0 保持原状, 1 上/左)</td>
+    </tr>
+    <tr>
+      <td valign="top">myScroll.currentPage</td>
+      <td valign="top">当前Snap信息</td>
+    </tr>
+    <tr>
+      <td valign="top">myScroll.maxScrollXmyScroll.maxScrollY</td>
+      <td valign="top">当滚动到底部时的 myScroll.x/y</td>
+    </tr>
+  </tbody>
+</table>
+<br />
+</body>
+</html>

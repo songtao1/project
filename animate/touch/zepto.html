@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>events</title>
+	<style>
+		.delete { display: none; }
+	</style>
+</head>
+<body>
+	<ul id="items">
+		<li>List item 1 <span class="delete">DELETE</span></li>
+		<li>List item 2 <span class="delete">DELETE</span></li>
+	</ul>
+	<script type="text/javascript" src="http://zeptojs.com/zepto.js"></script>
+	<script type="text/javascript" src="zepto_extend.js"></script>
+	<script>
+		function Page() {
+
+		}
+
+		$.extend(Page.prototype, {
+
+			init: function() {
+				$("#items li").swipe(function(){
+					$('.delete').hide()
+					$('.delete', this).show()
+				})
+
+				$('.delete').tap(function(){
+				  $(this).parent('li').remove()
+				})
+			}
+
+			//改写上面的方法，看是否可以通过事件监听完成
+
+			
+		})
+
+		var page = new Page();
+		page.init();
+
+
+	</script>
+</body>
+</html>

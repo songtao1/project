@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>events</title>
+	<style>
+		.js-wrapper {
+			padding-top: 200px;
+		}
+		.area {
+			width: 500px;
+			height: 500px;
+			line-height: 500px;
+			margin: 0 auto;
+			text-align: center;
+			font-size: 40px;
+		}
+	</style>
+</head>
+<body>
+	<div class="js-wrapper">
+		<div class="area js-area">event test</div>
+	</div>
+	<div class="js-wrapper1">
+		<div class="area js-area1">event test</div>
+	</div>
+	<script type="text/javascript" src="http://zeptojs.com/zepto.js"></script>
+	<script type="text/javascript" src="zepto_extend.js"></script>
+	<script type="text/javascript" src="fastclick.js"></script>
+	<script>
+		function Page() {
+
+		}
+
+		$.extend(Page.prototype, {
+
+			init: function() {
+				this.useFastClick();
+				this.bindEvents();
+			},
+
+			useFastClick: function() {
+				FastClick.attach(document.body);
+			},
+
+			bindEvents: function() {
+				var area = $(".js-wrapper"),
+					area1 = $(".js-wrapper1");
+				area1.on("touchstart", $.proxy(this.handleAreaTouchStart, this));
+				// area.on("touchmove", $.proxy(this.handleAreaTouchMove, this));
+				// area.on("touchend", $.proxy(this.handleAreaTouchEnd, this));
+				area.on("click", $.proxy(this.handleAreaClick, this));
+			},
+
+			handleAreaTouchStart: function(e) {
+				alert(456);
+				//e.target
+				//console.log(e);
+			},
+
+			handleAreaTouchMove: function(e) {
+				//console.log(e);
+			},
+
+			handleAreaTouchEnd: function(e) {
+				//console.log($(e.target));
+				console.log($(e.currentTarget));
+			},
+
+			handleAreaClick: function(e) {
+				alert(123);
+			},
+
+			
+			//作业，跟随运动
+		})
+
+		var page = new Page();
+		page.init();
+
+
+	</script>
+</body>
+</html>

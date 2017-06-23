@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>fastClick</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<style>
+		.delete { display: none; }
+	</style>
+</head>
+<body>
+	<ul id=items>
+  		<li>List item 1 <span class=delete>DELETE</span></li>
+  		<li>List item 2 <span class=delete>DELETE</span></li>
+	</ul>
+	<script src="zepto.js"></script>
+	<!-- <script src="fastclick.js"></script>
+ -->
+	<script>
+
+		$('#items li').swipe(function(){
+		  $('.delete').hide()
+		  $('.delete', this).show()
+		})
+
+		// delete row on tapping delete button
+		$('.delete').tap(function(){
+		  $(this).parent('li').remove()
+		})
+
+	</script>
+</body>
+</html>

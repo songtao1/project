@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html class="ui-viewport-640 mobile ks-webkit600 ks-webkit" lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="cleartype" content="on">
+    <title>“巢”人初体验-雀巢2015实习生招募启动啦！</title>
+    <meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link href="style/aio.min.css" rel="stylesheet" type="text/css">
+    <link href="style/animate.min.css" rel="stylesheet" type="text/css">
+    <script src="style/aio.min.js"></script>
+    <link href="style/nestle.css" rel="stylesheet" type="text/css">
+    <script src="style/wei-user.js"></script>
+
+    <script>
+        //获取浏览器页面可见高度和宽度
+        var _PageHeight = document.documentElement.clientHeight,
+                _PageWidth = document.documentElement.clientWidth;
+        //计算loading框距离顶部和左部的距离（loading框的宽度为215px，高度为61px）
+        var _LoadingTop = _PageHeight > 61 ? (_PageHeight - 61) / 2 : 0,
+                _LoadingLeft = _PageWidth > 215 ? (_PageWidth - 215) / 2 : 0;
+        //在页面未加载完毕之前显示的loading Html自定义内容
+        var _LoadingHtml = '<div id="loadingDiv" style="position:absolute;left:0;width:100%;height:100%;px;top:0;background:#fff;z-index:10000;"><div class="login_inner" style=" top:' + _LoadingTop + 'px;"></div></div>';
+        //呈现loading效果
+        document.write(_LoadingHtml);
+
+        window.onload = function () {
+            var loadingMask = document.getElementById('loadingDiv');
+            loadingMask.parentNode.removeChild(loadingMask);
+        };
+
+        //监听加载状态改变
+        document.onreadystatechange = completeLoading;
+
+        //加载状态为complete时移除loading效果
+        function completeLoading() {
+//            if (document.readyState == "complete") {
+//                var loadingMask = document.getElementById('loadingDiv');
+//                loadingMask.parentNode.removeChild(loadingMask);
+//            }
+        }
+    </script>
+</head>
+<body>
+<img src="images/avatar.jpg" alt="" style="opacity: 0;position:absolute;"/>
+<!-- container -->
+<div class="container">
+    <div class="content">
+        <div class="content-body">
+            <div class="ui-loading js-loading" style="display: none;">
+                <i class="fa fa-circle-o-notch fa-spin fa-3x">
+                </i>
+            </div>
+            <div class="music_btn active"></div>
+            <div class="power-scroll-container js-power-scroll-container" style="">
+                <div class="swiper-container js-power-scroll" data-options="{&quot;hashNav&quot;:false,&quot;mode&quot;:&quot;vertical&quot;,&quot;loop&quot;:false,&quot;shadow&quot;:true}">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide_index" data-hash="index" style="">
+
+                            <div class="slide-wrapper page_index">
+                                <h1 class="logo fadeIn animated"><img src="images/logo_gray.png" alt="雀巢 Nestle" /></h1>
+                                <div class="xy_c txt">
+                                    <img src="images/indexTxt.png" alt="品味雀巢，无限人生" style="visibility: hidden" />
+                                    <div class="abs zoomIn animated delay_500ms"> <img src="images/indexTxtThereis.png" alt="" /></div>
+                                    <div class="abs zoomIn animated delay_800ms"> <img src="images/indexTxtLife.png" alt="" /></div>
+                                    <div class="abs zoomIn animated delay_1s"> <img src="images/indexTxtMoreTo.png" alt="" /></div>
+                                    <div class="abs zoomIn animated delay_1100ms"> <img src="images/indexTxtNestle.png" alt="" /></div>
+                                    <div class="abs zoomIn animated delay_1300ms"> <img src="images/indexTxtCnLife.png" alt="" /></div>
+                                    <div class="abs zoomIn animated delay_1500ms"> <img src="images/indexTxtCnNestle.png" alt="" /></div>
+                                </div>
+                                <div class="xy_c snacky">
+                                    <img src="images/indexSnacky.jpg" alt="" class="fadeIn animated" />
+                                </div>
+                                <div class="house bgmove animated infinite">
+                                    <img src="images/indexHouse.jpg" alt="" style="visibility: hidden" />
+                                </div>
+                                <div class="house bgmove0 animated infinite">
+                                    <img src="images/indexHouse.jpg" alt="" style="visibility: hidden" />
+                                </div>
+                                <div class="ui-up-arrow" style="display: block;padding:0 0 10%;">
+                                    <a href="javascript:;">
+                                        <img src="images/arrow-up-blue.png" alt="滑动提示">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide_dog" data-hash="dog" style="">
+                            <div class="slide-wrapper page_index">
+                                <div class="txtbox">
+                                    <div class="txtleft ">
+                                        <img src="images/selerTxtLeft01.png" alt="" class="bounceInLeft animated delay_1s" />
+                                        <img src="images/selerTxtLeft02.png" alt="" class="abs bounceInLeft animated delay_1200ms" />
+                                        <img src="images/selerTxtLeft03.png" alt="" class="abs bounceInLeft animated delay_1400ms" />
+                                        <img src="images/selerTxtLeft04.png" alt="" class="abs bounceInLeft animated delay_1600ms" />
+                                    </div>
+                                    <div class="txtright">
+                                        <img src="images/selerTxtRight.png" alt="" class="bounceInRight animated delay_800ms"  />
+                                        <div class="me abs zoomIn animated"> <img src="images/selerTxtRightMe.png" alt="" /></div>
+                                        <div class="title abs zoomIn animated delay_500ms"> <img src="images/selerTxtRightTitle.png" alt="" /></div>
+                                    </div>
+                                </div>
+                                <div class="rolebox">
+                                    <div class="role bounceInDown animated delay_500ms"><img src="images/boy.gif" alt="销售汪" class="" /></div>
+                                    <div class="lights fadeIn animated delay_1s"><img src="images/lightsRight.png" alt="" class="qqflash infinite delay_1500ms animated" /></div>
+                                    <div class="star fadeIn animated delay_1s"> <img src="images/starsRight.png" alt="" class="qqflash infinite delay_1700ms animated" /></div>
+                                </div>
+                                <div class="ui-up-arrow" style="display: block">
+                                    <a href="javascript:;">
+                                        <img src="images/arrow-up.png" alt="滑动提示">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide_cat" data-hash="cat" style="">
+                            <div class="slide-wrapper ">
+                                <div class="txtbox">
+                                    <div class="txtleft fadeInLeft animated">
+                                        <img src="images/marketTxtLeft.png" alt="" class="fadeInLeftBig animated delay_900ms"  />
+                                        <div class="me abs zoomIn animated"> <img src="images/selerTxtRightMe.png" alt="" /></div>
+                                        <div class="title abs zoomIn animated delay_500ms"> <img src="images/marketTxtLeftTitle.png" alt="" /></div>
+                                    </div>
+                                    <div class="txtright">
+                                        <img src="images/marketTxtRight01.png" alt="" class="bounceInRight animated delay_1600ms" />
+                                        <img src="images/marketTxtRight02.png" alt="" class="abs bounceInRight animated delay_1400ms" />
+                                        <img src="images/marketTxtRight03.png" alt="" class="abs bounceInRight animated delay_1200ms" />
+                                        <img src="images/marketTxtRight04.png" alt="" class="abs bounceInRight animated delay_1s" />
+                                    </div>
+                                </div>
+                                <div class="rolebox">
+                                    <div class="role bounceInDown animated delay_500ms"><img src="images/girl.gif" alt="市场喵" /></div>
+                                    <div class="lights fadeIn animated delay_1s"><img src="images/lightsLeft.png" alt="" class="qqflash infinite delay_1500ms animated" /></div>
+                                    <div class="star fadeIn animated delay_1s"> <img src="images/starsLeft.png" alt="" class="qqflash infinite delay_1700ms animated" /></div>
+                                </div>
+                            </div>
+                            <div class="ui-up-arrow" style="display: block">
+                                <a href="javascript:;">
+                                    <img src="images/arrow-up.png" alt="滑动提示">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide_fix" data-hash="fix" style="">
+                            <div class="slide-wrapper">
+                                <div class="role role_dog bounceIn animated"><img src="images/dogFix.gif" alt="销售大师" /></div>
+                                <div class="abs pickme txt_dog fadeIn animated delay_500ms"><img src="images/FixDogTxt.png" alt="销售大师-选我" /></div>
+                                <div class="abs btn_dog fadeInLeft animated delay_900ms"><img src="images/FixDogBtn.png" alt="成为销售大师" /></div>
+                                <div class="abs lights_dog fadeIn animated delay_1300ms"><img src="images/FixDogLight.png" alt="销售大师-灯光" class="qqflash animated infinite delay_300ms" /></div>
+
+                                <div class="abs role role_cat bounceIn animated delay_200ms"><img src="images/catFix.gif" alt="市场喵" /></div>
+                                <div class="abs pickme txt_cat fadeIn animated delay_600ms"><img src="images/FixCatTxt.png" alt="市场喵-选我" /></div>
+                                <div class="abs btn_cat fadeInRight animated delay_800ms"><img src="images/FixCatBtn.png" alt="成为市场奇才" /></div>
+                                <div class="abs lights_cat fadeIn animated delay_1500ms"><img src="images/FixCatLight.png" alt="市场奇才-灯光" class="qqflash animated infinite delay_100ms" /></div>
+
+                                <div class="btn_notice fadeIn animated delay_1900ms">
+                                    <div class="txt">
+                                        <img src="images/FixArrowTxt.png" alt="" style="visibility: hidden;" />
+                                        <div class="abs you"><img src="images/FixArrowTxtYou.png" alt="" class="qqbounce animated infinite" /></div>
+                                    </div>
+
+                                </div>
+                                <div class="ui-up-arrow" style="display: block">
+                                    <a href="javascript:;">
+                                        <img src="images/arrow-up.png" alt="滑动提示">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide_titles" data-hash="titles">
+                            <div class="slide-wrapper">
+                                <div class="txt summer fadeIn animated"> <img src="images/titlesAcoreSummer.png" alt="" /></div>
+                                <div class="txt dots fadeIn animated delay_400ms"> <img src="images/titlesDots.png" alt="" /></div>
+                                <div class="titles">
+                                    <div class="bounceInDown animated delay_1500ms"><img src="images/jobTitle01.png" alt="" /></div>
+                                    <div class="abs bounceInDown animated delay_1400ms"><img src="images/jobTitle02.png" alt="" /></div>
+                                    <div class="abs bounceInDown animated delay_1300ms"><img src="images/jobTitle03.png" alt="" /></div>
+                                    <div class="abs bounceInDown animated delay_1200ms"><img src="images/jobTitle04.png" alt="" /></div>
+                                    <div class="abs bounceInDown animated delay_1100ms"><img src="images/jobTitle05.png" alt="" /></div>
+                                    <div class="abs bounceInDown animated delay_1s"><img src="images/jobTitle06.png" alt="" /></div>
+                                    <div class="abs bounceInDown animated delay_900ms"><img src="images/jobTitle07.png" alt="" /></div>
+                                    <div class="abs bounceInDown animated delay_800ms"><img src="images/jobTitle08.png" alt="" /></div>
+                                </div>
+                                <div class="ui-up-arrow" style="display: block">
+                                    <a href="javascript:;">
+                                        <img src="images/arrow-up.png" alt="滑动提示">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide_end" data-hash="end">
+                            <div class="slide-wrapper">
+                                <h1 class="logo fadeIn animated"><img src="images/logo_gray.png" alt="" /></h1>
+                                <div class="txt fadeIn animated delay_200ms">
+                                    <img src="images/endTxt2015.jpg" alt="" /></div>
+                                <div class="searchbox fadeIn animated delay_400ms">
+                                    <div class="keywords "><img src="images/searchTxt.png" alt="" /><div class="layer fadeOutRightBig animated delay_800ms"></div></div>
+                                    <div class="btn_search click animated delay_1700ms"></div>
+                                </div>
+                                <div class="btnbox fadeIn animated delay_2s">
+                                    <img src="images/endBtnGuide.png" alt="" />
+                                    <div class="btns">
+                                        <a href="http://mp.weixin.qq.com/s?__biz=MzA4NTgwODMzNg==&mid=206239928&idx=1&sn=e893a993b2acd15c11452ef66a4e563e#rd"> <img src="images/btnFollowNestle.png" alt="关注雀巢" /></a>
+                                        <a href="http://vip.yingjiesheng.com/2015/nestle_intern/"> <img src="images/btnJoin.png" alt="立即申请" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="landscape_notice">
+    <div class="text-center font-size-28 c-white">
+        <i class="fa fa-4x fa-mobile"></i><br><span>请将屏幕竖向浏览</span>
+    </div>
+</div>
+<script>
+    (new MobileSlider()).init();
+    function loadMp3 (src) {
+//        alert(src)
+//        if(!app.getUa.weixin && app.getUa.android){
+//            $('<audio preload><source src="'+src+'" /></audio>').appendTo('body');//.on('canplaythrough', setMp3);
+//        }
+//        else{
+            $('<audio loop preload><source src="'+src+'" /></audio>').appendTo('body');//.on('canplaythrough', setMp3);
+//        }
+        setMp3();
+    }
+
+    function setMp3 () {
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
+                $('audio')[0].play();
+            });
+        }, false);
+        $('audio')[0].play();
+        $('.music_btn').on('click', playOrPaused);
+    }
+    loadMp3("music/music.mp3")
+
+    function playOrPaused(){
+        $('.music_btn').removeClass('active');
+        setTimeout(function () {
+            $('.music_btn').addClass('active')
+        }, 0)
+        var audio = $('audio')[0];
+        var _this = $(this);
+        if(audio.paused){
+            _this.removeClass('off');
+            audio.play();
+            return;
+        }
+        _this.addClass('off');
+        audio.pause();
+    }
+
+
+</script>
+
+
+
+</body>
+</html>

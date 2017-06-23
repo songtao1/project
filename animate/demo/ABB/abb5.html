@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html class="ui-viewport-640 mobile ks-webkit600 ks-webkit" lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="cleartype" content="on">
+    <title>ABB</title>
+    <meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link href="css/aio.min.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.min.css" rel="stylesheet" type="text/css">
+    <script src="css/aio.min.js"></script>
+    <link href="css/abb.css" rel="stylesheet" type="text/css">
+    <script src="css/wei-user.js"></script>
+	<script src="js/touchswipe.js"></script>
+    <script>
+        //获取浏览器页面可见高度和宽度
+        var _PageHeight = document.documentElement.clientHeight,
+                _PageWidth = document.documentElement.clientWidth;
+        //计算loading框距离顶部和左部的距离（loading框的宽度为215px，高度为61px）
+        var _LoadingTop = _PageHeight > 61 ? (_PageHeight - 61) / 2 : 0,
+                _LoadingLeft = _PageWidth > 215 ? (_PageWidth - 215) / 2 : 0;
+        //在页面未加载完毕之前显示的loading Html自定义内容
+        var _LoadingHtml = '<div id="loadingDiv" style="position:absolute;left:0;width:100%;height:100%;px;top:0;background:#fff;z-index:10000;"><div class="login_inner" style=" top:' + _LoadingTop + 'px;"></div></div>';
+        //呈现loading效果
+        document.write(_LoadingHtml);
+
+        window.onload = function () {
+            var loadingMask = document.getElementById('loadingDiv');
+            loadingMask.parentNode.removeChild(loadingMask);
+        };
+
+        //监听加载状态改变
+        document.onreadystatechange = completeLoading;
+
+        //加载状态为complete时移除loading效果
+        function completeLoading() {
+//            if (document.readyState == "complete") {
+//                var loadingMask = document.getElementById('loadingDiv');
+//                loadingMask.parentNode.removeChild(loadingMask);
+//            }
+        }
+    </script>
+</head>
+<body>
+<!-- container -->
+<div class="container">
+    <div class="content">
+        <div class="content-body">
+            <div class="ui-loading js-loading" style="display: none;">
+                <i class="fa fa-circle-o-notch fa-spin fa-3x">
+                </i>
+            </div>
+            <div class="music_btn active"></div>
+            <div class="power-scroll-container js-power-scroll-container" style="">
+                <div class="swiper-container js-power-scroll" data-options="{&quot;hashNav&quot;:false,&quot;mode&quot;:&quot;vertical&quot;,&quot;loop&quot;:false,&quot;shadow&quot;:true}">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide_index" data-hash="index" style="">
+
+                            <div class="abb_wrap">
+								<div class="bounceInLeft animated delay_500ms">
+									<img src="images/logo.jpg" />
+								</div>
+								<div class="bounceInDown animated delay_700ms">
+									<img src="images/content.jpg" />
+								</div>
+								<div class="posia bounceInUp animated delay_700ms">
+									<img src="images/con_img.jpg" />
+									<div class="abb_text role zoomIn animated delay_1200ms">
+										<p>ABB中国 - 用电力与效率创造美好世界</p>
+									</div>
+								</div>
+								<div class="ui-up-arrow">
+									<a href="javascript:;">
+										<img src="images/arrowUp.png" alt="滑动提示">
+									</a>
+								</div>
+							</div>
+                        </div>
+						<!--page2-->
+                        <div class="swiper-slide slide_dog" data-hash="dog" style="">
+                            <div class="slide-wrapper abb_china">
+                                <div class="abb_diqiu fadeInUp animated delay_900ms">
+                                    <img src="images/diqiu2.png" class="rotateShowsRight" />
+                                </div>
+                                <div class="abbcina_bottom ">
+                                    <div class="bounceInUp animated  delay_500ms">
+                                        <img src="images/abbchina-bottom.png"  />
+                                    </div>
+                                    <div class="abb_china_con">
+                                        <p class="margin-left22 fadeIn animated delay_800ms"><img src="images/ditu.png" class="map" /></p>
+                                        <p class="margin-left22 font48 fadeIn animated delay_1s">ABB在中国</p>
+                                        <p class="margin-left22 en fadeIn animated delay_1200ms">Smart Technology, Intelligent Upgrading</p>
+                                        <p class="margin-left22 en fadeIn animated delay_1400ms">ABB in China, for China and the world</p>
+                                        <p class="cn fadeIn animated delay_1600ms">ABB在中国拥有39家企业，1.9万名员工，在126个城市设有销售与服务分公司及办事处，拥有研发、生产、工程、销售与服务全方位业务。2014年ABB在华的销售收入超过58亿美元，保持ABB集团全球第二大市场的地位。</p>
+                                    </div>
+                                </div>
+                                <div class="ui-up-arrow">
+                                    <a href="javascript:void(0);">
+                                        <img src="images/arrowUp.png" alt="滑动提示">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--page3-->
+						<div class="swiper-slide slide_titles" data-hash="titles">
+                            <div class="slide-wrapper">
+                                <div class="role bounceInLeft animated delay_500ms">
+									<img src="images/page3_title.png" />
+								</div>
+                                <div class="titles">
+                                    <div class="flip-container bounceInUp animated delay_1500ms" >
+                                        <div class="flipper imgdonghua1">
+                                            <div class="front">
+                                                <img src="images/page3_img1.png" />
+
+                                            </div>
+                                            <div class="back">
+                                                <img src="images/page3_img1_2.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flip-container bounceInUp animated delay_1400ms" >
+                                        <div class="flipper imgdonghua2">
+                                            <div class="front">
+                                                <img src="images/page3_img2.png" />
+
+                                            </div>
+                                            <div class="back">
+                                                <img src="images/page3_img2_2_03.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flip-container bounceInUp animated delay_1300ms" >
+                                        <div class="flipper imgdonghua3">
+                                            <div class="front">
+                                                <img src="images/page3_img3.png" />
+
+                                            </div>
+                                            <div class="back">
+                                                <img src="images/page3_img3_2_04.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ui-up-arrow" style="display: block">
+                                    <a href="javascript:;">
+                                        <img src="images/arrowUp.png" alt="滑动提示">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+						<!--page4-->
+						<div class="swiper-slide slide_titles4" data-hash="photoHeart">
+                            <div class="slide-wrapper">
+                                <div class="role bounceInRight animated delay_500ms">
+									<img src="images/logo.jpg" />
+								</div>
+								<div class="role bounceInLeft animated delay_500ms">
+									<img src="images/page4_title.png" />
+								</div>
+								<div class="page4_text zoomIn animated delay_500ms">
+                                    我们在全球大约100个国家有14.5万名员工，他们在全球各个角落为不同项目辛勤工作着。关于在ABB的工作和生活，每个人都有着与众不同的故事。
+								</div>
+								<div class="photo-heart-list">
+									<div class="phs phs01 animated bounceInUp"> <img class="imgdonghua" src="images/photoHeartList01.png" alt="" /></div>
+									<div class="phs phs02 animated bounceInLeft delay_100ms"> <img class="imgdonghua" src="images/photoHeartList02.png" alt="" /></div>
+									<div class="phs phs03 animated bounceInLeft delay_100ms"> <img class="imgdonghua" src="images/photoHeartList03.png" alt="" /></div>
+									<div class="phs phs04 animated bounceInRight delay_200ms"> <img class="imgdonghua" src="images/photoHeartList04.png" alt="" /></div>
+									<div class="phs phs05 animated bounceInRight delay_200ms"> <img class="imgdonghua" src="images/photoHeartList05.png" alt="" /></div>
+									<div class="phs phs06 animated bounceInDown delay_300ms"> <img class="imgdonghua" src="images/photoHeartList06.png" alt="" /></div>
+									<div class="phs phs07 animated bounceInRight delay_300ms"> <img class="imgdonghua" src="images/photoHeartList07.png" alt="" /></div>
+									<div class="phs phs08 animated bounceInRight delay_400ms"> <img class="imgdonghua" src="images/photoHeartList08.png" alt="" /></div>
+									<div class="phs phs09 animated bounceInRight delay_400ms"> <img class="imgdonghua" src="images/photoHeartList09.png" alt="" /></div>
+									<div class="phs phs10 animated bounceInUp delay_500ms"> <img class="imgdonghua" src="images/photoHeartList10.png" alt="" /></div>
+									<div class="phs phs11 animated bounceInUp delay_500ms"> <img class="imgdonghua" src="images/photoHeartList11.png" alt="" /></div>
+									<div class="phs phs12 animated bounceInRight delay_600ms"> <img class="imgdonghua" src="images/photoHeartList12.png" alt="" /></div>
+									<div class="phs phs13 animated bounceInRight delay_700ms"> <img class="imgdonghua" src="images/photoHeartList13.png" alt="" /></div>
+									<div class="phs phs14 animated bounceInUp delay_700ms"> <img class="imgdonghua" src="images/photoHeartList14.png" alt="" /></div>
+									<div class="phs phs15 animated bounceInDown delay_600ms"> <img class="imgdonghua" src="images/photoHeartList15.png" alt="" /></div>
+									<div class="phs phs16 animated bounceInLeft delay_800ms"> <img class="imgdonghua" src="images/photoHeartList16.png" alt="" /></div>
+									<div class="phs phs17 animated bounceInRight delay_800ms"> <img class="imgdonghua" src="images/photoHeartList17.png" alt="" /></div>
+									<div class="phs phs18 animated bounceInRight delay_900ms"> <img class="imgdonghua" src="images/photoHeartList18.png" alt="" /></div>
+									<div class="phs phs19 animated bounceInLeft delay_900ms"> <img class="imgdonghua" src="images/photoHeartList19.png" alt="" /></div>
+									<div class="phs phs20 animated bounceInDown delay_1s"> <img class="imgdonghua" src="images/photoHeartList20.png" alt="" /></div>
+									<div class="phs phs21 animated bounceInLeft delay_1s"> <img class="imgdonghua" src="images/photoHeartList21.png" alt="" /></div>
+									<div class="phs phs22 animated bounceInRight delay_1100ms"> <img class="imgdonghua" src="images/photoHeartList22.png" alt="" /></div>
+									<div class="phs phs23 animated bounceInDown delay_1200ms"> <img class="imgdonghua" src="images/photoHeartList23.png" alt="" /></div>
+									<div class="phs phs24 animated bounceInLeft delay_1300ms"> <img class="imgdonghua" src="images/photoHeartList24.png" alt="" /></div>
+									<div class="phs phs25 animated bounceInUp delay_1400ms"> <img class="imgdonghua" src="images/photoHeartList25.png" alt="" /></div>
+									<div class="phs phs26 animated bounceInDown delay_1400ms"> <img class="imgdonghua" src="images/photoHeartList26.png" alt="" /></div>
+								</div>
+                                <div class="ui-up-arrow" style="display: block">
+                                    <a href="javascript:;">
+                                        <img src="images/arrowUp.png" alt="滑动提示">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+						<!--page5-->
+						<div class="swiper-slide slide_titles slide_titles5" data-hash="titlesclub" >
+                            <div class="slide-wrapper">
+                                <div class="role">
+                                    <div class="role bounceInDown animated delay_300ms abb_page5_bann">
+                                        <img id="page5_img" src="images/page5_bann.png" style="opacity: 0.2" />
+                                        <div class="abb_page5_bann_img" id="abb_page5_bann">
+                                            <img class="page5_img_dong" id="page5_img" src="images/page5_bann.png" />
+                                            <img id="page5_img2" src="images/page5_bann2.png" />
+                                            <img id="page5_img3" src="images/page5_bann3.png" />
+                                            <img id="page5_img4" src="images/page5_bann4.png" />
+                                            <img id="page5_img5" src="images/page5_bann5.png" />
+                                        </div>
+                                    </div>
+                                    <div data-role="page" class="titles clear" id="pageone">
+                                        <div data-role="content" id="abb_page5_img">
+                                            <div id="abbh5" class="page5_titlt6 page5_titlt1 bounceInUp animated delay_1500ms"><span class="span_active fadeInLeft animated delay_300ms">&nbsp;</span><i>ABB年会</i></div>
+                                            <div id="abbh51" class="page5_titlt6 page5_titlt2 bounceInUp animated delay_1400ms"><span class="fadeInLeft animated delay_300ms">&nbsp;</span><i>ABB中国研究院成立十周年</i></div>
+                                            <div id="abbh52" class="page5_titlt6 page5_titlt3 bounceInUp animated delay_1300ms"><span class="fadeInLeft animated delay_300ms">&nbsp;</span><i>ABB志愿者</i></div>
+                                            <div id="abbh53" class="page5_titlt6 page5_titlt4 bounceInUp animated delay_1200ms"><span class="fadeInLeft animated delay_300ms">&nbsp;</span><i>ABB家庭日</i></div>
+                                            <div id="abbh54" class="page5_titlt6 page5_titlt5 bounceInUp animated delay_1100ms"><span class="fadeInLeft animated delay_300ms">&nbsp;</span><i>俱乐部之一（舞蹈俱乐部）</i></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="ui-up-arrow">
+                                    <a href="javascript:;">
+                                        <img src="images/arrowUp.png" alt="滑动提示">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+						<!--page6-->
+						<div class="swiper-slide page_end" data-hash="end">
+                            <div class="slide-wrapper">
+                                <div class="end-flight transf animated delay_500ms">
+                                    <img src="images/flightEnd.png" alt="" />
+                                </div>
+                                <dl class="join-guide xy_c">
+                                    <dt>加入ABB</dt>
+                                    <dd>美好世界 由你开启</dd>
+                                    <dd class="btn butdonghua">
+                                        <a href="http://mp.weixin.qq.com/s?__biz=MzA5NTAyNTEwMw==&mid=206657413&idx=1&sn=08fba64767da79433f890e951d395c9b#rd">
+                                            <img src="images/btnJoinUs.png" alt="更多详情请点击" />
+                                        </a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="landscape_notice">
+    <div class="text-center font-size-28 c-white">
+        <i class="fa fa-4x fa-mobile"></i><br><span>请将手机竖屏浏览</span>
+    </div>
+</div>
+<script type="text/javascript">
+    var abb_page5_title = document.getElementById("abb_page5_img")
+    var titles = abb_page5_title.getElementsByTagName("div")
+    var spans = abb_page5_title.getElementsByTagName("span")
+    var abb_page5_bann = document.getElementById("abb_page5_bann")
+    var banns = abb_page5_bann.getElementsByTagName("img")
+    for(var i=0;i<titles.length;i++){
+        titles[i].index=i
+        titles[i].onclick=function(){
+            for(var i=0;i<banns.length;i++){
+                banns[i].className = "";
+            }
+            for(var i=0;i<spans.length;i++){
+                spans[i].className = "spanback";
+            }
+            banns[this.index].className = "page5_img_dong";
+            spans[this.index].className = "spanbj";
+
+        }
+    }
+</script>
+<script>
+    (new MobileSlider()).init();
+</script>
+</body>
+</html>

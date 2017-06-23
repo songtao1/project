@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>animate</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+</head>
+<body>
+	<h1 class="js-example">Example</h1>
+	<h1 class="js-example-one">Example</h1>
+	<button class="js-button">开始运动</button>
+	<script type="text/javascript" src="http://zeptojs.com/zepto.js"></script>
+	<script>
+		// zepto插件的扩展, 通过这样的扩展，每个$生成的zepto对象都有了animateCss这个方法
+		// $. 和 $.fn 的区别
+		$.extend($.fn, {
+			animateCss: function (animationName) {
+		        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+		        this.addClass('animated ' + animationName).one(animationEnd, function() {
+		            $(this).removeClass('animated ' + animationName);
+		        });
+		    }
+		});
+	</script>
+	<script>
+		function Page() {
+			this.exampleElem = $(".js-example");
+			this.exampleOneElem = $(".js-example-one");
+		}
+
+		$.extend(Page.prototype, {
+			init: function() {
+				this.bindEvents();
+			},
+
+			bindEvents: function() {
+				var button = $(".js-button");
+				button.on("click", $.proxy(this.handleButtonClick, this));
+				// this.exampleElem.on("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", $.proxy(this.handleAnimationFinished, this));
+			},
+
+			handleButtonClick: function() {
+				//this.exampleElem.addClass("animated fadeOutDown");
+				this.exampleElem.animateCss("fadeOutDown");
+				this.exampleOneElem.animateCss("fadeIn");
+			},
+
+			// handleAnimationFinished: function(e) {
+			// 	var target = $(e.currentTarget);
+			// 	target.removeClass("animated fadeOutDown");
+			// }
+		});
+
+		var page = new Page();
+		page.init();
+
+
+	</script>
+</body>
+</html>

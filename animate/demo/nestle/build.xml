@@ -1,0 +1,29 @@
+<project name="project" default="">
+    <property file="application.properties"/>
+    <property name="projectHome" value="."/>
+
+    <target name="build-ci" depends="deploy-nestle,restart-nestle"/>
+
+	<!--
+    <target name="up" description="UPDATE Html">
+        <sshexec host="${server.nestle.ip}" username="root" port="${server.nestle.port}" keyfile="${server.keyfile}"
+                 command="${server.nestle.up}" failonerror="false"/>
+    </target>
+	-->
+    <target name="deploy-nestle" description="--> The deploy target (nestle Env)">
+        <sshexec host="${server.nestle.ip}" username="${server.username}" trust="true" port="${server.nestle.port}"
+                 keyfile="${server.keyfile}" command="${server.nestle.rsync}" />
+    </target>
+	
+    <target name="restart-nestle" description="Restart Server">
+        <sshexec host="${server.nestle.ip}" username="root" port="${server.nestle.port}" keyfile="${server.keyfile}"
+                 command="${server.nestle.restart}" failonerror="false"/>
+    </target>
+
+</project>
+
+
+
+
+
+

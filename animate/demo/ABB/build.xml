@@ -1,0 +1,29 @@
+<project name="project" default="">
+    <property file="application.properties"/>
+    <property name="projectHome" value="."/>
+
+    <target name="build-ci" depends="deploy-abb,restart-abb"/>
+
+	<!--
+    <target name="up" description="UPDATE Html">
+        <sshexec host="${server.abb.ip}" username="root" port="${server.abb.port}" keyfile="${server.keyfile}"
+                 command="${server.abb.up}" failonerror="false"/>
+    </target>
+	-->
+    <target name="deploy-abb" description="--> The deploy target (abb Env)">
+        <sshexec host="${server.abb.ip}" username="${server.username}" trust="true" port="${server.abb.port}"
+                 keyfile="${server.keyfile}" command="${server.abb.rsync}" />
+    </target>
+	
+    <target name="restart-abb" description="Restart Server">
+        <sshexec host="${server.abb.ip}" username="root" port="${server.abb.port}" keyfile="${server.keyfile}"
+                 command="${server.abb.restart}" failonerror="false"/>
+    </target>
+
+</project>
+
+
+
+
+
+

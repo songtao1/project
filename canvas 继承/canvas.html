@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<canvas id="canvas" width="500" height="500"></canvas>
+	<canvas id="new_canvas" width="500" height="500"></canvas>
+</body>
+<script src="canvas.js"></script>
+<script>
+	var canvas = document.getElementById("canvas"),
+		instance = new Canvas(canvas);
+	instance.init();
+	
+	var new_canvas = document.getElementById("new_canvas"),
+		new_instance = new newCanvas(new_canvas);
+	new_instance.init();
+</script>
+</html>
