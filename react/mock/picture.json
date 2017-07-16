@@ -1,0 +1,31 @@
+{
+	"ret":true,
+	"data":{
+		"picture":[
+			{
+				"article_id":1,
+				"src":"../img/r1.png"
+				
+		},
+		{
+				"article_id":2,
+				"src":"../img/r2.png"
+				
+		},
+		{
+				"article_id":3,
+				"src":"../img/r3.png"
+				
+		},
+		{
+				"article_id":4,
+				"src":"../img/r4.png"
+				
+		},
+		{
+				"article_id":5,
+				"src":"../img/r1.png"
+				
+		}
+	]}
+}

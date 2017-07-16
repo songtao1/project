@@ -1,9 +1,0 @@
-{
-	"css": [
-		"src/css/index/index.less"
-	],
-
-	"js": [
-		"src/js/index/index.js"
-	]
-}
