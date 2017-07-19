@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        .wrap {
+            width: 650px;
+            height: 250px;
+            margin: 100px auto 0;
+            position: relative;
+            /*overflow: hidden;*/
+        }
+
+        .wrap img {
+            display: block;
+        }
+
+        .wrap ul {
+        	width: 650px;
+            height: 250px;
+            /*z-index: 1;*/
+            position: relative;
+        }
+
+        .wrap ol {
+            height: 30px;
+            z-index: 2;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        .wrap > ul > li {
+      		position: absolute;
+      		
+      
+     
+        }
+
+        .wrap > ol > li {
+            float: left;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            border: 1px solid white;
+            margin-right: 5px;
+            background: Gray;
+            
+        }
+        .wrap > ol {
+            z-index: 999;
+        }
+
+        .wrap > ol > li:hover {
+            cursor: pointer;
+        }
+
+        .wrap li.active {
+            padding: 2px;
+            color: orange;
+            margin-top: -4px;
+            border: 1px solid orange;
+        }
+        .img-index{
+        	z-index: 10;
+        }
+      
+    </style>
+
+</head>
+<body>
+<div class="wrap">
+    <ul class="pic">
+        <li class="img-index"><img src="images/01.jpg" alt=""/></li>
+        <li><img src="images/02.jpg" alt=""/></li>
+        <li><img src="images/03.jpg" alt=""/></li>
+        <li><img src="images/04.jpg" alt=""/></li>
+        <li><img src="images/05.jpg" alt=""/></li>
+    </ul>
+    <ol class="page">
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+</div>
+</body>
+</html>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript">
+	function Page() {
+		this.box = $(".wrap");
+		this.num = 0;
+		
+	}
+	$.extend(Page.prototype,{
+		//构造器
+		init : function() {
+			this.bindEvents()
+		},
+		//绑定事件
+		bindEvents : function() {
+			this.picMove();
+			//这里传入了event.data。这里是畅哥查出来的是on方法中传参的
+			$(".page li").on("mouseenter",{this_:this},this.handleEnterPage);
+			$(".page li").on("mouseleave",$.proxy(this.handleLeavePage,this))
+		},
+		
+		picMove : function() {
+			//$.proxy是 jq中 绑定this指向的一种方法。
+			this.time = setInterval($.proxy(this.clock,this),1000)
+			
+		},
+		
+		handleEnterPage : function(event) {
+			var this_  = event.data.this_
+			clearInterval(this_.time);  
+			this_.num = $(this).index()-1;
+			this_.clock();
+		},
+		
+		handleLeavePage : function() {
+			this.time = setInterval($.proxy(this.clock,this),1000)
+		},
+		
+		clock : function() {
+			this.num++
+			if ( this.num == 5) {
+				 this.num = 0;
+			}
+			$("ul>li").eq(this.num).addClass("img-index").siblings().removeClass("img-index")
+			$(".page>li").eq(this.num).addClass("active").siblings().removeClass("active");
+		}
+		
+	})
+	
+	var  page  =  new Page()
+	page.init()
+</script>
